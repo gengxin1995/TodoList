@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container" bindtap="onTap">
+  <view class="input-container">
+    <image src="{{isAdd?'/images/icon/plus.png':'/images/icon/search.png'}}" bindtap="onChange"></image>
+    <input focus="true" placeholder="{{isAdd?'输入待办事项...':'搜索待办事项...'}}" value="{{addText}}" bindconfirm="onConfirm" bindinput="onInput" class="confirm" />
+    <image src="/images/icon/right.png" bindtap="onConfirm"></image>
+  </view>
+  <view class="content">
+    <view class="selector" wx:if="{{todos.length}}">
+      <picker class="cate" value="{{cate}}" range="{{cates}}" bindchange="bindPickerChange">
+        <view class="picker"> <text>{{cate}}</text> </view>
+      </picker>
+    </view>
+    <view class="lists">
+      <block wx:if="{{todos.length < 1}}">
+        <view class="nodata">暂无数据</view>
+      </block>
+      <block wx:for="{{todos}}" wx:key="{{item.id}}">
+        <component-todo todo="{{item}}" data-index="{{index}}" bindstate="onStateChange" binddelete="onDelete" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd"></component-todo>
+      </block>
+    </view>
+  </view>
+</view>

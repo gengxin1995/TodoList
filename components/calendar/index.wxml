@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="header">
+    <view class="prev" bindtap="prevMonth">
+      <text>《</text>
+    </view>
+    <picker mode="date" value="{{year}}-{{month}}" bindchange="dateChange" fields="month">
+      <view>{{year}}年{{month}}月</view>    
+    </picker>
+    <view class="next" bindtap="nextMonth">
+      <text>》</text>
+    </view>
+  </view>
+  <view class="weeks">
+    <view class="week" wx:for="{{weeks}}" wx:key="">{{item}}</view>        
+  </view>
+  <view class="dates">
+    <block wx:for="{{dates}}" wx:key="">
+      <view class="row">
+        <block wx:for="{{dates[index]}}" wx:for-item="day" wx:key="">
+          <view class="day" style="background: {{day.background}};" bindtap="selectDay" data-day="{{day}}">
+            <text style="color: {{day.color}};">{{day.date}}</text>
+            <view class="todo" wx:if="{{day.todo && (day.date !== clickedDate.date)}}"></view>
+          </view>
+        </block>
+      </view>
+    </block>
+  </view>
+</view>

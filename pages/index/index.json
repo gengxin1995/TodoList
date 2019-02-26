@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "component-todo": "/components/list/index",
+    "component-selector": "/components/list/index"
+  }
+}

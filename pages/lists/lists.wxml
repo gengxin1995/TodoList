@@ -1,0 +1,11 @@
+<!--pages/lists/lists.wxml-->
+<view class="container">
+  <view class="lists">
+    <block wx:if="{{lists.length < 1}}">
+      <view class="nodata">暂无数据</view>
+    </block>
+    <block wx:for="{{lists}}" wx:key="{{item.id}}">
+      <component-todo todo="{{item}}" bindstate="onStateChange"></component-todo>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="content" style="{{todo.txtStyle}}">
+    <image src="{{todo.done?check_url:uncheck_url}}" bindtap="onTap"></image>
+    <view class="item" bindtap="onTapView">
+      <text class="title {{todo.done?'checked':'uncheck'}}">{{todo.text}}</text>
+      <text class="time">{{util.formatTime(todo.date)}}</text>
+    </view>
+  </view>
+  <view class="del" bindtap="onDel">
+    <text>删除</text>
+  </view>
+</view>
+
+<wxs module="util">
+  var formatTime = function(date) {
+    date = getDate(date)
+    var year = date.getFullYear()
+    var month = date.getMonth() + 1
+    var day = date.getDate()
+
+    var today = getDate()
+    var yearT = today.getFullYear()
+    var monthT = today.getMonth() + 1
+    var dayT = today.getDate()
+
+    if (year === yearT && month === monthT) {
+      if (day === dayT) {
+        return '今天'
+      } else if (day === dayT - 1) {
+        return '昨天'
+      } else if (day === dayT + 1) {
+        return '明天'
+      } else {
+        return month + '月' + day + '日'
+      }
+    } else if (year === yearT && month !== monthT) {
+      return month + '月' + day + '日'
+    }
+    return year + '年' + month + '月' + day + '日'
+  }
+
+  module.exports = {
+    formatTime: formatTime,
+  }
+</wxs>

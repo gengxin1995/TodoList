@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "calendar": "/components/calendar/index",
+    "component-todo": "/components/list/index"
+  }
+}

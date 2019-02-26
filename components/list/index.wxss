@@ -1,0 +1,63 @@
+.container {
+  position: relative;
+}
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.content image {
+  width: 14px;
+  height: 14px;
+  padding: 10px;
+  flex-shrink: 0;
+}
+.item {
+  width: 660rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 10px;
+  padding-left: 0;  
+}
+.title {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+}
+.checked {
+  color: #999;
+}
+.uncheck {
+  color: #333;
+}
+.time {
+  color: #999;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.del {
+  position: absolute;
+  z-index: 9;  
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 120rpx;
+  background-color: #666;
+  display: flex;
+  align-items: center;
+}
+.del text {
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  flex: 1;
+}

@@ -1,0 +1,8 @@
+<!--pages/cate/cate.wxml-->
+<view class="container">
+  <input focus="true" placeholder="添加分类" value="{{text}}" bindconfirm="{{isAdd?'addCate':'editCate'}}" bindinput="onInput" class="cate"></input>
+  <view class="btns">
+    <button type="primary" bindtap="{{isAdd?'addCate':'editCate'}}" class="add">{{isAdd?'添加':'修改'}}</button>
+    <button bindtap="delCate" class="del">删除</button>
+  </view>
+</view>

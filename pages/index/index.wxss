@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 1070rpx;
+  background-color: #eee;
+  padding: 10px;
+}
+.input-container {
+  width: 710rpx;
+  height: 50px;
+  border-bottom: 1px solid #c7c7c7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 10px;
+  background-color: #fff;
+  z-index: 100;
+  border-radius: 10px;
+}
+.confirm {
+  height: 100%;
+  font-size: 16px;
+  flex: 1;
+}
+/* .input-container image {
+  width: 28px;
+  height: 28px;
+  margin-left: 10px;
+} */
+.input-container image:nth-of-type(1) {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+.input-container image:nth-of-type(2) {
+  width: 28px;
+  height: 28px;
+  margin-left: 10px;
+}
+.content {
+  margin-top: 60px;
+}
+.selector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+  height: 32px;
+}
+.picker text{
+  padding: 5px 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+.lists {
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 10px;
+}
+.item image {
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+}
+.nodata {
+  padding: 30rpx;
+  color: #999;
+  font-size: 11pt;
+  text-align: center;
+  font-style: italic;
+}

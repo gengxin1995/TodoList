@@ -1,0 +1,11 @@
+<view class="container">
+  <calendar todo="{{days}}" bindtodos="getTodos" bindchanged="getDays"></calendar>
+  <view class="lists">
+    <block wx:if="{{todos.length < 1}}">
+      <view class="nodata">暂无数据</view>
+    </block>
+    <block wx:for="{{todos}}" wx:key="{{item.id}}">
+      <component-todo todo="{{item}}" data-index="{{index}}" bindstate="onStateChange" binddelete="onDelete" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd"></component-todo>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 1070rpx;
+  background-color: #eee;
+  padding: 10px;
+}
+.lists {
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.nodata {
+  padding: 30rpx;
+  color: #999;
+  font-size: 11pt;
+  text-align: center;
+  font-style: italic;
+}

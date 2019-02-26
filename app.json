@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/calendar/calendar",
+    "pages/done/done",
+    "pages/detail/detail",
+    "pages/lists/lists",
+    "pages/cate/cate"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "TodoList",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#000",
+    "backgroundColor": "#fff",
+    "color": "#c7c7c7",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "列表",
+        "iconPath": "images/tab/uncheck.png",
+        "selectedIconPath": "images/tab/uncheck@highlight.png"
+      },
+      {
+        "pagePath": "pages/done/done",
+        "text": "已完成",
+        "iconPath": "images/tab/check.png",
+        "selectedIconPath": "images/tab/check@highlight.png"
+      },
+      {
+        "pagePath": "pages/calendar/calendar",
+        "text": "日历",
+        "iconPath": "images/tab/calendar.png",
+        "selectedIconPath": "images/tab/calendar@highlight.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "images/tab/about.png",
+        "selectedIconPath": "images/tab/about@highlight.png"
+      }
+    ]
+  }
+}
