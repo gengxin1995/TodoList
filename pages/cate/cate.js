@@ -38,6 +38,9 @@ Page({
 
   addCate: function (e) {
     let text = this.data.text;
+    if (!text) {
+      return;
+    }
     categoryModel.addCategory(text);
     wx.navigateBack({
       delta: 1

@@ -79,6 +79,9 @@ Page({
 
   onConfirm: function (event) {
     let text = this.data.addText;
+    if (!text) {
+      return;
+    }
     let isAdd = this.data.isAdd;
     if (isAdd) {
       let id = new Date().getTime();
