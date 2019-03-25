@@ -15,8 +15,8 @@
   justify-content: space-between;
   padding: 0 10px;
   box-sizing: border-box;
-  position: fixed;
-  top: 10px;
+  position: sticky;
+  top: 0px;
   background-color: #fff;
   z-index: 100;
   border-radius: 10px;
@@ -42,7 +42,7 @@
   margin-left: 10px;
 }
 .content {
-  margin-top: 60px;
+  margin-top: 10px;
 }
 .selector {
   display: flex;
